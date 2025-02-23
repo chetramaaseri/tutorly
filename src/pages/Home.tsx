@@ -152,7 +152,7 @@ const Home = () => {
             process.map((item, index) => {
               return (
                 <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4">
-                  <div className="w-full flex space-x-3 items-center py-8">
+                  <div className="w-full flex space-x-3 justify-center items-center py-8">
                     <div className="flex-shrink-0">
                       <img className="invert brightness-200" width={48} height={48} src={item.icon} alt="" />
                     </div>
@@ -164,14 +164,14 @@ const Home = () => {
           }
         </div>
       </section>
-      <section className="w-full py-20">
+      <section className="w-full py-10 md:py-20">
         <div className="max-w-screen-md mx-auto px-4 flex flex-wrap">
           <div className="relative px-8 py-10 w-full bg-gray-200">
             <div className="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] transform bg-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
               <img height={32} width={32} className="rotate-30 invert brightness-200" src="https://cdn-icons-png.flaticon.com/128/7002/7002167.png" alt="" />
             </div>
             <p className="text-md mb-1 font-semibold text-sky-600">Find Your Tutor</p>
-            <div className="flex sm:flex-wrap md:flex-nowrap gap-2">
+            <div className="flex flex-wrap md:flex-nowrap gap-2">
               <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Skills" required />
               <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Location" required />
               <button className="cursor-pointer text-white bg-blue-500 hover:bg-amber-300 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
@@ -196,7 +196,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full">
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap">
+        <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap gap-4">
           {
             statics.map((item, index) => {
               return (
@@ -214,8 +214,8 @@ const Home = () => {
       <section className="relative w-full my-10 bg-fixed bg-cover bg-bottom" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/education-day-assortment-with-copy-space_23-2148721275.jpg')" }} >
         <div className="absolute z-0 inset-0 bg-black opacity-70"></div>
         <div className="z-10 relative max-w-screen-xl mx-auto px-4 bg-opacity-80 py-10 rounded-lg">
-          <div className="flex">
-            <div className="w-1/2">
+          <div className="flex flex-wrap">
+            <div className="w-full md:w-1/2">
               <h3 className="text-white text-center text-2xl font-bold my-5">
                 Teachers
               </h3>
@@ -244,7 +244,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <h3 className="text-white text-center text-2xl font-bold my-5">
                 Teaching Jobs
               </h3>
@@ -283,7 +283,7 @@ const Home = () => {
             {
               popularSubjects.map((item, index) => {
                 return (
-                  <div key={"process" + index} className="w-1/2 md:w-1/4 pe-3 pb-3">
+                  <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4 pe-3 pb-3">
                     <div className="flex gap-4 items-center p-3 bg-gray-200 rounded-md">
                       <div className="flex-shrink-0">
                         <img className="" width={32} height={32} src={item.icon} alt="" />
@@ -299,11 +299,11 @@ const Home = () => {
       </section>
       <section className="w-full my-10">
         <div className="max-w-screen-xl mx-auto px-4">
-          <div className="flex gap-10">
-            <div className="w-1/2">
+          <div className="flex flex-wrap gap-10">
+            <div className="w-full md:w-1/2">
               <div className="bg-amber-200 rounded-md p-5">
                 <div className="flex flex-wrap">
-                  <div className="w-3/4 flex items-center">
+                  <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
                         <h4 className="text-2xl font-bold text-gray-900">Lorem ipsum dolor sit.</h4>
@@ -314,7 +314,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-1/4">
+                  <div className="w-full sm:w-1/4">
                     <div className="w-full pt-10">
                       <img src="https://edumall-4437.kxcdn.com/main/wp-content/uploads/sites/2/2020/08/banner-image-group-teachers.png" alt="Course Hub" className="w-full h-auto" />
                     </div>
@@ -322,10 +322,10 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <div className="bg-sky-100 rounded-md p-5">
                 <div className="flex flex-wrap">
-                  <div className="w-3/4 flex items-center">
+                  <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
                         <h4 className="text-2xl font-bold text-gray-900">Lorem ipsum dolor sit amet</h4>
@@ -336,7 +336,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-1/4">
+                  <div className="w-full sm:w-1/4">
                     <div className="w-full pt-10">
                       <img src="http://edumall-4437.kxcdn.com/main/wp-content/uploads/sites/2/2020/08/banner-image-laptop.png" alt="Course Hub" className="w-full h-auto" />
                     </div>
