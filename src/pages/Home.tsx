@@ -196,7 +196,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full">
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap gap-4">
+        <div className="mx-auto px-4 flex flex-wrap gap-4 sm:gap-0">
           {
             statics.map((item, index) => {
               return (
@@ -299,8 +299,8 @@ const Home = () => {
       </section>
       <section className="w-full my-10">
         <div className="max-w-screen-xl mx-auto px-4">
-          <div className="flex flex-wrap gap-10">
-            <div className="w-full md:w-1/2">
+          <div className="flex flex-wrap gap-10 sm:gap-0">
+            <div className="w-full md:w-1/2 px-3">
               <div className="bg-amber-200 rounded-md p-5">
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-3/4 flex items-center">
@@ -322,7 +322,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 px-3">
               <div className="bg-sky-100 rounded-md p-5">
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-3/4 flex items-center">
