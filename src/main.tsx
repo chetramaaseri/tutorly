@@ -3,17 +3,15 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router";
 import './index.css'
 import App from './App.tsx'
-import { Provider, useDispatch } from 'react-redux';
-import { store } from './redux/store.ts';
+import { Provider } from 'react-redux';
+import { store, useAppDispatch } from './redux/store.ts';
 import { loadSession } from './redux/slices/sessionSlice.ts';
 
 function AppInitializer({ children }: { children: React.ReactNode }) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
-    const initializeApp = async () => {
-      await dispatch(loadSession());
-    };
-    initializeApp();
+    dispatch(loadSession());
   }, [dispatch]);
 
   return <>{children}</>;
