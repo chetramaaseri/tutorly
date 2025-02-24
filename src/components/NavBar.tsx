@@ -8,14 +8,14 @@ function NavBar() {
         setDropdownOpen(!isDropdownOpen);
     };
 
-    const handleMouseEnter = () => {
-        setDropdownOpen(true);
-    };
+    // const handleMouseEnter = () => {
+    //     setDropdownOpen(true);
+    // };
 
-    const handleMouseLeave = async () => {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        setDropdownOpen(false);
-    };
+    // const handleMouseLeave = async () => {
+    //     await new Promise((resolve) => setTimeout(resolve, 500));
+    //     setDropdownOpen(false);
+    // };
 
     return (
         <nav className="z-11 bg-white border-gray-200 dark:bg-gray-900 shadow-sm sticky top-0">
