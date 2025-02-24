@@ -20,24 +20,24 @@ const Home = () => {
 
   const statics = [
     {
-      "title" : "50,000+",
-      "text" : "Experienced tutors"
+      "title": "50,000+",
+      "text": "Experienced tutors"
     },
     {
-      "title" : "100,000+",
-      "text" : "5-Star Tutor Reviews"
+      "title": "100,000+",
+      "text": "5-Star Tutor Reviews"
     },
     {
-      "title" : "120+",
-      "text" : "Subjects taught"
+      "title": "120+",
+      "text": "Subjects taught"
     },
     {
-      "title" : "100+",
-      "text" : "Tutor nationalities"
+      "title": "100+",
+      "text": "Tutor nationalities"
     },
     {
-      "title" : "120,000+",
-      "text" : "Students Served"
+      "title": "120,000+",
+      "text": "Students Served"
     },
   ];
 
@@ -118,19 +118,25 @@ const Home = () => {
       "text": "Artificial Intelligence"
     }
   ];
-  
+
   return (
     <>
-      <section className="w-full bg-gray-200">
+      <section className="w-full bg-gray-200 dark:bg-gray-800">
         <div className="max-w-screen-xl mx-auto px-10">
           <div className="flex flex-wrap">
             <div className="w-full sm:w-2/3 flex items-center">
               <div className="w-full md:w-2/3">
                 <div className="space-y-8 py-16">
-                  <p className="text-md font-semibold text-sky-600 mb-3">4,000+ Expert Tutors in 250+ Subjects</p>
-                  <h2 className="text-4xl font-bold text-gray-900">Tutoring That Improves Student Outcomes</h2>
-                  <p className="text-gray-600">Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we’re here to guide you every step of the way.</p>
-                  <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-300 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
+                  <p className="text-md font-semibold text-sky-600 dark:text-sky-400 mb-3">
+                    4,000+ Expert Tutors in 250+ Subjects
+                  </p>
+                  <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                    Tutoring That Improves Student Outcomes
+                  </h2>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we’re here to guide you every step of the way.
+                  </p>
+                  <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Find your tutor
                   </a>
                 </div>
@@ -144,41 +150,37 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="w-full bg-blue-900">
+      <section className="w-full bg-blue-900 dark:bg-gray-950">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap">
-          {
-            process.map((item, index) => {
-              return (
-                <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4">
-                  <div className="w-full flex space-x-3 justify-center items-center py-8">
-                    <div className="flex-shrink-0">
-                      <img className="invert brightness-200" width={48} height={48} src={item.icon} alt="" />
-                    </div>
-                    <p className="text-white text-md font-medium">{item.text}</p>
-                  </div>
+          {process.map((item, index) => (
+            <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4">
+              <div className="w-full flex space-x-3 justify-center items-center py-8">
+                <div className="flex-shrink-0">
+                  <img className="invert" width={48} height={48} src={item.icon} alt="" />
                 </div>
-              )
-            })
-          }
+                <p className="text-white text-md font-medium dark:text-gray-200">{item.text}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
       <section className="w-full py-10 md:py-20">
         <div className="max-w-screen-lg mx-auto px-4 flex flex-wrap">
-          <div className="relative px-8 py-10 w-full bg-gray-200">
-            <div className="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] transform bg-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
-              <img height={32} width={32} className="rotate-30 invert brightness-200" src="https://cdn-icons-png.flaticon.com/128/7002/7002167.png" alt="" />
+          <div className="relative px-8 py-10 w-full bg-gray-200 dark:bg-gray-950 rounded-md">
+            <div className="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] transform bg-blue-600 dark:bg-blue-800 rounded-full h-12 w-12 flex items-center justify-center">
+              <img height={24} width={24} className="rotate-30 invert brightness-200" src="https://cdn-icons-png.flaticon.com/128/7002/7002167.png" alt="" />
             </div>
-            <p className="text-md mb-2 font-semibold text-sky-600">Find Your Tutor</p>
+            <p className="text-md mb-2 font-semibold text-sky-600 dark:text-sky-400">Find Your Tutor</p>
             <div className="flex flex-wrap md:flex-nowrap gap-2">
-              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Skills" required />
-              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Location" required />
-              <button className="cursor-pointer text-white bg-blue-500 hover:bg-amber-300 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
+              <input type="text" className="bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Skills" required />
+              <input type="text" className="bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Location" required />
+              <button className="cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                 Search
               </button>
             </div>
             <div className="w-full md:w-1/2 mt-10 mx-auto">
               <div className="flex justify-center gap-2">
-                <p className="text-md font-semibold dark:text-gray-900">Trending: </p>
+                <p className="text-md font-semibold">Trending: </p>
                 <div className="flex flex-wrap justify-center items-center gap-2">
                   {
                     trendingSearches.map((item, index) => {
@@ -282,11 +284,11 @@ const Home = () => {
               popularSubjects.map((item, index) => {
                 return (
                   <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4 pe-3 pb-3">
-                    <div className="flex gap-4 items-center p-3 bg-gray-200 rounded-md">
+                    <div className="flex gap-4 items-center p-3 bg-gray-200 dark:bg-gray-950 rounded-md">
                       <div className="flex-shrink-0">
-                        <img className="" width={24} height={24} src={item.icon} alt="" />
+                        <img className="dark:invert" width={24} height={24} src={item.icon} alt="" />
                       </div>
-                      <p className="text-sm font-medium dark:text-gray-900">{item.text}</p>
+                      <p className="text-sm font-medium">{item.text}</p>
                     </div>
                   </div>
                 )
@@ -298,14 +300,14 @@ const Home = () => {
       <section className="w-full py-10">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="flex flex-wrap gap-10 sm:gap-0">
-            <div className="w-full md:w-1/2 px-3">
-              <div className="bg-amber-200 rounded-md p-5">
+            <div className="w-full md:w-1/2 pe-3">
+              <div className="bg-amber-200 dark:bg-gray-800 rounded-md p-5">
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Lorem ipsum dolor sit.</h4>
-                        <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
+                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Lorem ipsum dolor sit.</h4>
+                        <p className="text-gray-600 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
                         <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                           Find Courses
                         </a>
@@ -320,14 +322,14 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2 px-3">
-              <div className="bg-sky-100 rounded-md p-5">
+            <div className="w-full md:w-1/2 ps-3">
+              <div className="bg-sky-100 dark:bg-indigo-900 rounded-md p-5">
                 <div className="flex flex-wrap">
                   <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
-                        <h4 className="text-2xl font-bold text-gray-900">Lorem ipsum dolor sit amet</h4>
-                        <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
+                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Lorem ipsum dolor sit amet</h4>
+                        <p className="text-gray-600 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
                         <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                           Find Courses
                         </a>
