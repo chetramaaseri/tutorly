@@ -6,7 +6,7 @@ function RootLayout() {
     return (
         <div>
             <NavBar />
-            <main>
+            <main className="bg-white border-gray-200 dark:bg-gray-900">
                 <Outlet />
             </main>
             <Footer />

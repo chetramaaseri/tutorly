@@ -121,7 +121,6 @@ const Home = () => {
   
   return (
     <>
-      {/* Hero Section */}
       <section className="w-full bg-gray-200">
         <div className="max-w-screen-xl mx-auto px-10">
           <div className="flex flex-wrap">
@@ -145,7 +144,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Hero Section */}
       <section className="w-full bg-blue-900">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap">
           {
@@ -165,27 +163,27 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full py-10 md:py-20">
-        <div className="max-w-screen-md mx-auto px-4 flex flex-wrap">
+        <div className="max-w-screen-lg mx-auto px-4 flex flex-wrap">
           <div className="relative px-8 py-10 w-full bg-gray-200">
             <div className="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] transform bg-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
               <img height={32} width={32} className="rotate-30 invert brightness-200" src="https://cdn-icons-png.flaticon.com/128/7002/7002167.png" alt="" />
             </div>
-            <p className="text-md mb-1 font-semibold text-sky-600">Find Your Tutor</p>
+            <p className="text-md mb-2 font-semibold text-sky-600">Find Your Tutor</p>
             <div className="flex flex-wrap md:flex-nowrap gap-2">
-              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Skills" required />
-              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Location" required />
+              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Skills" required />
+              <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Location" required />
               <button className="cursor-pointer text-white bg-blue-500 hover:bg-amber-300 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                 Search
               </button>
             </div>
             <div className="w-full md:w-1/2 mt-10 mx-auto">
               <div className="flex justify-center gap-2">
-                <p className="text-md font-semibold">Trending: </p>
+                <p className="text-md font-semibold dark:text-gray-900">Trending: </p>
                 <div className="flex flex-wrap justify-center items-center gap-2">
                   {
                     trendingSearches.map((item, index) => {
                       return (
-                        <button key={"trendingSearches"+index} className="bg-gray-100 hover:bg-amber-300 cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</button>
+                        <button key={"trendingSearches"+index} className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</button>
                       )
                     })
                   }
@@ -216,7 +214,7 @@ const Home = () => {
         <div className="z-10 relative max-w-screen-xl mx-auto px-4 bg-opacity-80 py-10 rounded-lg">
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/2">
-              <h3 className="text-white text-center text-2xl font-bold my-5">
+              <h3 className="text-white text-center text-2xl font-bold mt-5 mb-10">
                 Teachers
               </h3>
               <div className="flex flex-wrap my-4">
@@ -245,7 +243,7 @@ const Home = () => {
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <h3 className="text-white text-center text-2xl font-bold my-5">
+              <h3 className="text-white text-center text-2xl font-bold mt-5 mb-10">
                 Teaching Jobs
               </h3>
               <div className="flex flex-wrap my-4">
@@ -278,7 +276,7 @@ const Home = () => {
       </section>
       <section className="w-full">
         <div className="max-w-screen-xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-gray-900 my-4">Popular Subjets</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white my-4">Popular Subjets</h3>
           <div className="flex flex-wrap items-center justify-start">
             {
               popularSubjects.map((item, index) => {
@@ -286,9 +284,9 @@ const Home = () => {
                   <div key={"process" + index} className="w-full sm:w-1/2 md:w-1/4 pe-3 pb-3">
                     <div className="flex gap-4 items-center p-3 bg-gray-200 rounded-md">
                       <div className="flex-shrink-0">
-                        <img className="" width={32} height={32} src={item.icon} alt="" />
+                        <img className="" width={24} height={24} src={item.icon} alt="" />
                       </div>
-                      <p className="text-md font-medium">{item.text}</p>
+                      <p className="text-sm font-medium dark:text-gray-900">{item.text}</p>
                     </div>
                   </div>
                 )
@@ -297,7 +295,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="w-full my-10">
+      <section className="w-full py-10">
         <div className="max-w-screen-xl mx-auto px-4">
           <div className="flex flex-wrap gap-10 sm:gap-0">
             <div className="w-full md:w-1/2 px-3">
@@ -347,8 +345,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-
     </>
   );
 
