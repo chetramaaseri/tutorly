@@ -306,10 +306,10 @@ const Home = () => {
                   <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
-                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Lorem ipsum dolor sit.</h4>
-                        <p className="text-gray-600 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
-                        <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
-                          Find Courses
+                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Become An Instructor</h4>
+                        <p className="text-gray-600 dark:text-white">Top instructors from around the world teach millions of students on Tutorly</p>
+                        <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-bold rounded-sm text-sm px-8 py-3 text-center transition duration-300">
+                          Start teaching today
                         </a>
                       </div>
                     </div>
@@ -328,10 +328,10 @@ const Home = () => {
                   <div className="w-full sm:w-3/4 flex items-center">
                     <div className="w-full">
                       <div className="space-y-4">
-                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Lorem ipsum dolor sit amet</h4>
-                        <p className="text-gray-600 dark:text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id placeat laborum, quibusdam dolor hic?</p>
-                        <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
-                          Find Courses
+                        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">Transform Access To Education</h4>
+                        <p className="text-gray-600 dark:text-white">Create an account to receive our newsletter, course recommendations and promotions.</p>
+                        <a href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-blue-600 font-bold rounded-sm text-sm px-8 py-3 text-center transition duration-300">
+                          Register for free
                         </a>
                       </div>
                     </div>
