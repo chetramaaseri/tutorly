@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 
 const Home = () => {
 
@@ -7,9 +6,6 @@ const Home = () => {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0 },
   };
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
   const process = [
     {
       "icon": "https://cdn-icons-png.flaticon.com/128/2732/2732589.png",
