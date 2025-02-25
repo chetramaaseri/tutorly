@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 const Home = () => {
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 40, scale: 0.99 },
+    visible: { opacity: 1, y: 0, scale: 1 },
   };
   const process = [
     {
@@ -134,23 +134,23 @@ const Home = () => {
             <div className="w-full sm:w-2/3 flex items-center">
               <div className="w-full md:w-2/3">
                 <div className="space-y-8 py-16">
-                  <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="text-md font-semibold text-sky-600 dark:text-sky-400 mb-3">
+                  <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.2, duration: 1 }} className="text-md font-semibold text-sky-600 dark:text-sky-400 mb-3">
                     4,000+ Expert Tutors in 250+ Subjects
                   </motion.p>
-                  <motion.h2 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="text-4xl font-bold text-gray-900 dark:text-white">
+                  <motion.h2 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.2, duration: 1 }} className="text-4xl font-bold text-gray-900 dark:text-white">
                     Tutoring That Improves Student Outcomes
                   </motion.h2>
-                  <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="text-gray-600 dark:text-gray-300">
+                  <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.3, duration: 1 }} className="text-gray-600 dark:text-gray-300">
                     Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we’re here to guide you every step of the way.
                   </motion.p>
-                  <motion.a variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
+                  <motion.a variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Find your tutor
                   </motion.a>
                 </div>
               </div>
             </div>
             <div className="w-full sm:w-1/3">
-              <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-full pt-10">
+              <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} className="w-full pt-10">
                 <img src="https://edumall-4437.kxcdn.com/main/wp-content/uploads/sites/2/2021/03/course-hub-hero-image.png" alt="Course Hub" className="w-full h-auto" />
               </motion.div>
             </div>
@@ -160,7 +160,7 @@ const Home = () => {
       <section className="w-full bg-blue-900 dark:bg-gray-950">
         <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap">
           {process.map((item, index) => (
-            <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} key={"process" + index} className="w-full sm:w-1/2 md:w-1/4">
+            <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} key={"process" + index} className="w-full sm:w-1/2 md:w-1/4">
               <div className="w-full flex space-x-3 justify-center items-center py-8">
                 <div className="flex-shrink-0">
                   <img className="invert" width={48} height={48} src={item.icon} alt="" />
@@ -172,7 +172,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-full py-10 md:py-20">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="max-w-screen-lg mx-auto px-4 flex flex-wrap">
+        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.4, duration: 0.5 }} className="max-w-screen-lg mx-auto px-4 flex flex-wrap">
           <div className="relative px-8 py-10 w-full bg-gray-200 dark:bg-gray-950 rounded-md">
             <div className="absolute top-0 left-0 translate-x-[-50%] translate-y-[-50%] transform bg-blue-600 dark:bg-blue-800 rounded-full h-12 w-12 flex items-center justify-center">
               <img height={24} width={24} className="rotate-30 invert brightness-200" src="https://cdn-icons-png.flaticon.com/128/7002/7002167.png" alt="" />
@@ -192,7 +192,7 @@ const Home = () => {
                   {
                     trendingSearches.map((item, index) => {
                       return (
-                        <motion.button variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: (0.1 + (index/5)), duration: 0.3 }} key={"trendingSearches"+index} className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</motion.button>
+                        <motion.button variants={{hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 }}} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1 + (index/10), duration: .5 }} key={"trendingSearches"+index} className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</motion.button>
                       )
                     })
                   }
@@ -207,7 +207,7 @@ const Home = () => {
           {
             statics.map((item, index) => {
               return (
-                <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.2, duration: 0.5 }} key={"statics" + index} className="w-full md:w-1/5">
+                <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ amount: 0.8 }} transition={{ delay: 0.3, duration: 1 }} key={"statics" + index} className="w-full md:w-1/5">
                   <div className="flex flex-col items-center justify-center">
                     <h5 className="text-2xl font-bold">{item.title}</h5>
                     <p className="text-md font-medium">{item.text}</p>
@@ -227,24 +227,24 @@ const Home = () => {
                 Teachers
               </h3>
               <div className="flex flex-wrap my-4">
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 0.5 }} className="w-1/2 px-5">
                   <button className="w-full text-white hover:text-black hover:border-amber-300 border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Teachers
                   </button>
                 </motion.div>
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 0.5 }} className="w-1/2 px-5">
                   <button className="w-full text-white hover:text-black hover:border-amber-300 border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Online Teachers
                   </button>
                 </motion.div>
               </div>
               <div className="flex flex-wrap my-4">
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="w-full text-white hover:text-black hover:border-amber-300 border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Home Teachers
                   </button>
                 </motion.div>
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="w-full text-white hover:text-black hover:border-amber-300 border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Assignment Help
                   </button>
@@ -256,24 +256,24 @@ const Home = () => {
                 Teaching Jobs
               </h3>
               <div className="flex flex-wrap my-4">
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="text-white hover:text-black hover:border-amber-300 w-full border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Teaching Jobs
                   </button>
                 </motion.div>
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="text-white hover:text-black hover:border-amber-300 w-full border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Online Teaching
                   </button>
                 </motion.div>
               </div>
               <div className="flex flex-wrap my-4">
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="text-white hover:text-black hover:border-amber-300 w-full border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Home Teaching
                   </button>
                 </motion.div>
-                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
+                <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1, duration: 0.3 }} className="w-1/2 px-5">
                   <button className="text-white hover:text-black hover:border-amber-300 w-full border border-gray-300 cursor-pointer hover:bg-amber-300 font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
                     Assignment Jobs
                   </button>
@@ -290,7 +290,7 @@ const Home = () => {
             {
               popularSubjects.map((item, index) => {
                 return (
-                  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} transition={{ delay: 0.1 + (index/5), duration: 0.3 }} key={"process" + index} className="w-full sm:w-1/2 md:w-1/4 pe-3 pb-3">
+                  <motion.div variants={{hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 }}} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1 + (index/10), duration: .5 }} key={"process" + index} className="w-full sm:w-1/2 md:w-1/4 pe-3 pb-3">
                     <div className="flex gap-4 items-center p-3 bg-gray-200 dark:bg-gray-950 rounded-md">
                       <div className="flex-shrink-0">
                         <img className="dark:invert" width={24} height={24} src={item.icon} alt="" />
