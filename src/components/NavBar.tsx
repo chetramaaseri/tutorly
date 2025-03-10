@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router";
 
 function NavBar() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -32,19 +33,19 @@ function NavBar() {
             transition={{ duration: 0.4, ease: "easeInOut" }}
         >
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <Link to={'/'} className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Tutorly</span>
-                </a>
+                </Link>
                 <div className="flex md:order-2 space-x-3 md:space-x-1 rtl:space-x-reverse">
                     <button className="relative cursor-pointer text-black dark:text-white font-medium rounded-lg text-sm mx-4 py-2 text-center after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full dark:after:bg-white">Become an Instructor</button>
                     <div className="border-l my-1 border-gray-200 hidden sm:block"></div>
-                    <button className="cursor-pointer text-black dark:text-white font-medium rounded-lg text-sm px-4 py-2 text-center hidden sm:block">Log In</button>
-                    <button className="cursor-pointer text-sky-600 bg-sky-100 hover:bg-sky-200 font-medium rounded-lg text-sm px-4 py-2 text-center hidden sm:block">Sign Up</button>
+                    <Link to={'/auth/sign-in'} className="cursor-pointer text-black dark:text-white font-medium rounded-lg text-sm px-4 py-2 text-center hidden sm:block">Sign In</Link>
+                    <Link to={'/auth/sign-up'} className="cursor-pointer text-sky-600 bg-sky-100 hover:bg-sky-200 font-medium rounded-lg text-sm px-4 py-2 text-center hidden sm:block">Sign Up</Link>
                 </div>
                 <div className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1">
                     <ul className="flex flex-col md:flex-row md:space-x-1">
-                        <li><a href="#" className="block py-2 px-3 text-gray-900 text-sm font-medium hover:text-blue-700 dark:text-white">Home</a></li>
+                        <li><Link to={'/'} className="block py-2 px-3 text-gray-900 text-sm font-medium hover:text-blue-700 dark:text-white">Home</Link></li>
                         <li>
                             <button onClick={toggleDropdown} className="cursor-pointer flex items-center py-2 px-3 text-gray-900 text-sm font-medium hover:text-blue-600 dark:text-white">
                                 Company
