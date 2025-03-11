@@ -143,8 +143,10 @@ const Home = () => {
                   <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.3, duration: 1 }} className="text-gray-600 dark:text-gray-300">
                     Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we’re here to guide you every step of the way.
                   </motion.p>
-                  <motion.a variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} href="#section-top-banners" className="inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
-                    Find your tutor
+                  <motion.a variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} href="#section-top-banners" className="">
+                    <button className='inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300'>
+                      Find your tutor
+                    </button>
                   </motion.a>
                 </div>
               </div>
