@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 const TermsAndConditions = () => {
   return (
-    <section className=" min-h-screen">
-      <div className="max-w-3xl mx-auto p-8 bg-white dark:bg-gray-800 my-10">
+    <section className="bg-gray-50 dark:bg-gray-800 py-10 min-h-screen">
+      <div className="max-w-3xl mx-auto p-8 bg-white dark:bg-gray-800">
         <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
           Terms and Conditions
         </h1>
