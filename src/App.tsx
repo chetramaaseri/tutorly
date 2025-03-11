@@ -7,6 +7,7 @@ import SignUp from './pages/auth/SignUp'
 import ForgotPassword from './pages/auth/ForgotPassword'
 import ResetPassword from './pages/auth/ResetPassword'
 import TermsAndConditions from './pages/legal/TermAndConditions'
+import TutorsList from './pages/tutors/TutorsList'
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
         <Route path='term-and-conditions' element={<TermsAndConditions />} />
+        <Route path='all-tutors' element={<TutorsList tutorType={'all'} />} />
+        <Route path='all-online-tutors' element={<TutorsList tutorType={'online'} />} />
+        <Route path='all-home-tutors' element={<TutorsList tutorType={'home'} />} />
+        <Route path='all-assignment-tutors' element={<TutorsList tutorType={'assignment'} />} />
       </Route>
       <Route path="/auth" element={<AuthLayout />}>
         <Route path='sign-in' element={<SignIn />} />
