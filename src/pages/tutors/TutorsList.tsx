@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 
 type TutorsListProps = {
@@ -6,15 +6,10 @@ type TutorsListProps = {
 };
 const TutorsList = ({ tutorType }: TutorsListProps) => {
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 40, scale: 0.99 },
-    visible: { opacity: 1, y: 0, scale: 1 },
-  };
-
-  const filters = [
-    "Online Tutors",
-    "Home Tutors",
-  ];
+  // const fadeInUp = {
+  //   hidden: { opacity: 0, y: 40, scale: 0.99 },
+  //   visible: { opacity: 1, y: 0, scale: 1 },
+  // };
 
   return (
     <>
