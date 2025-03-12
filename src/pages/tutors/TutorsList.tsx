@@ -50,10 +50,10 @@ const TutorsList = ({ tutorType }: TutorsListProps) => {
               <div className="w-full mx-auto">
                 <div className="flex justify-center gap-2">
                   <div className="flex flex-wrap justify-center items-center gap-2">
-                    <Link to="/all-tutors" className={`cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'all' ? 'bg-amber-300': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>All Tutors</Link>
-                    <Link to={'/all-online-tutors'} className={`cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'online' ? 'bg-amber-300': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Online Tutors</Link>
-                    <Link to={'/all-home-tutors'} className={`cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'home' ? 'bg-amber-300': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Home Tutors</Link>
-                    <Link to={'/all-assignment-tutors'} className={`cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'assignment' ? 'bg-amber-300': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Assignment Tutors</Link>
+                    <Link to="/all-tutors" className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'all' ? 'bg-amber-300 dark:text-black': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>All Tutors</Link>
+                    <Link to={'/all-online-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'online' ? 'bg-amber-300 dark:text-black': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Online Tutors</Link>
+                    <Link to={'/all-home-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'home' ? 'bg-amber-300 dark:text-black': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Home Tutors</Link>
+                    <Link to={'/all-assignment-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'assignment' ? 'bg-amber-300 dark:text-black': 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Assignment Tutors</Link>
                   </div>
                 </div>
               </div>
