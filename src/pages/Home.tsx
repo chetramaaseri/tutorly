@@ -141,7 +141,7 @@ const Home = () => {
                     Tutoring That Improves Student Outcomes
                   </motion.h2>
                   <motion.p variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.3, duration: 1 }} className="text-gray-600 dark:text-gray-300">
-                    Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we’re here to guide you every step of the way.
+                    Unlock your full potential with expert tutoring designed to help you succeed. Our dedicated tutors provide personalized support across 250+ subjects, ensuring you build confidence and master challenging concepts. Whether you're preparing for exams or need help with coursework, we're here to guide you every step of the way.
                   </motion.p>
                   <motion.a variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.4, duration: 1 }} href="#section-top-banners" className="">
                     <button className='inline-block cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300'>
@@ -194,7 +194,7 @@ const Home = () => {
                   {
                     trendingSearches.map((item, index) => {
                       return (
-                        <motion.button variants={{hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 }}} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1 + (index/10), duration: .5 }} key={"trendingSearches"+index} className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</motion.button>
+                        <motion.button variants={{hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 }}} initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }} transition={{ delay: 0.1 + (index/10), duration: .5 }} key={"trendingSearches"+index} className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">{item}</motion.button>
                       )
                     })
                   }
