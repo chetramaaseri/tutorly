@@ -71,7 +71,7 @@ const JobsList = ({ jobtype }: JobsListProps) => {
             <div className="w-full md:w-4/5">
               <div className="flex flex-col">
                 {
-                  tutors.map((tutor,index) => (
+                  tutors.map((index) => (
                     <Link key={"tutor"+index} to={"/"} className="flex flex-col space-y-2 px-3 py-5 border-b border-gray-300 hover:bg-neutral-50 dark:hover:bg-gray-800 transition duration-100">
                       <h2 className='font-medium text-2xl'>Web Developer | WEB3 NodeJs React PHP JavaScript Java</h2>
                       <div className="flex gap-2 flex-wrap">
