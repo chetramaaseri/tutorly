@@ -1,10 +1,10 @@
 // import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 
-type TutorsListProps = {
-  tutorType: string;
+type JobsListProps = {
+  jobtype: string;
 };
-const TutorsList = ({ tutorType }: TutorsListProps) => {
+const JobsList = ({ jobtype }: JobsListProps) => {
 
   const tutors = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -22,7 +22,7 @@ const TutorsList = ({ tutorType }: TutorsListProps) => {
         <div className="z-10 md:h-full relative p-5 max-w-screen-lg mx-auto">
           <div className="h-full flex justify-start items-center">
             <div className="flex flex-col max-w-lg p-6 text-gray-900 bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700 xl:p-8 dark:bg-gray-800 dark:text-white space-y-4">
-              <h1 className="mb-3 text-3xl font-bold">Find Tutors near me</h1>
+              <h1 className="mb-3 text-3xl font-bold">Find Tutors Jobs</h1>
               <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Share a few details and we'll show you the best Korean lessons near you.</p>
               <form className="space-y-4">
                 <div>
@@ -48,16 +48,16 @@ const TutorsList = ({ tutorType }: TutorsListProps) => {
                   </div>
                 </div>
                 <button className="inline-block w-full cursor-pointer text-white bg-blue-500 hover:bg-amber-400 hover:text-black font-medium rounded-sm text-sm px-8 py-3 text-center transition duration-300">
-                  Search for Tutors
+                  Search for Tutors Jobs
                 </button>
               </form>
               <div className="w-full mx-auto">
                 <div className="flex justify-center gap-2">
                   <div className="flex flex-wrap justify-center items-center gap-2">
-                    <Link to="/all-tutors" className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'all' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>All Tutors</Link>
-                    <Link to={'/all-online-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'online' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Online Tutors</Link>
-                    <Link to={'/all-home-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'home' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Home Tutors</Link>
-                    <Link to={'/all-assignment-tutors'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${tutorType === 'assignment' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Assignment Tutors</Link>
+                    <Link to="/all-tutor-jobs" className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${jobtype === 'all' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>All Jobs</Link>
+                    <Link to={'/online-tutor-jobs'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${jobtype === 'online' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Online Tutor Jobs</Link>
+                    <Link to={'/offline-tutor-jobs'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${jobtype === 'offline' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Offline Tutor Jobs</Link>
+                    <Link to={'/assignment-tutor-jobs'} className={`dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium ${jobtype === 'assignment' ? 'bg-amber-300 dark:text-black' : 'bg-gray-100 dark:bg-gray-600 hover:bg-amber-300'}`}>Assignment Jobs</Link>
                   </div>
                 </div>
               </div>
@@ -73,15 +73,20 @@ const TutorsList = ({ tutorType }: TutorsListProps) => {
                 {
                   tutors.map((index) => (
                     <Link key={"tutor"+index} to={"/"} className="flex flex-col space-y-2 px-3 py-5 border-b border-gray-300 hover:bg-neutral-50 dark:hover:bg-gray-800 transition duration-100">
-                      <h2 className='font-medium text-2xl'>Cheeku Aaseri</h2>
+                      <h2 className='font-medium text-2xl'>Web Developer | WEB3 NodeJs React PHP JavaScript Java</h2>
                       <div className="flex gap-2 flex-wrap">
                         <button className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">Math</button>
                         <button className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">Math</button>
                         <button className="bg-gray-100 dark:bg-gray-600 hover:bg-amber-300 dark:hover:text-black cursor-pointer transform duration-300 ease-in-out rounded-full px-3 py-1 text-xs font-medium">Math</button>
                       </div>
-                      <h3 className='text-xl'>Web Developer | WEB3 NodeJs React PHP JavaScript Java</h3>
                       <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum accusantium illum vel consequuntur magnam dicta natus, magni aliquid, alias voluptatibus quo doloremque? Earum suscipit quos porro architecto accusantium rem quae aperiam nostrum nemo vitae repudiandae ratione soluta dicta quaerat eveniet expedita eos explicabo, eligendi ipsam modi. Quos, rem quisquam.</p>
                       <div className="flex items-center justify-start my-2 gap-4">
+                        <div className="flex items-center justify-start gap-1">
+                          <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z" clip-rule="evenodd"/>
+                          </svg>
+                          <span className="text-sm">15 min(s) ago</span>
+                        </div>
                         <div className="flex items-center justify-start gap-1">
                           <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                             <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd" />
@@ -117,4 +122,4 @@ const TutorsList = ({ tutorType }: TutorsListProps) => {
 
 };
 
-export default TutorsList;
+export default JobsList;
