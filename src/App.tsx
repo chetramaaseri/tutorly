@@ -10,6 +10,7 @@ import TermsAndConditions from './pages/legal/TermAndConditions'
 import TutorsList from './pages/tutors/TutorsList'
 import JobsList from './pages/jobs/JobsList'
 import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='offline-tutor-jobs' element={<JobsList jobtype={'offline'} />} />
         <Route path='assignment-tutor-jobs' element={<JobsList jobtype={'assignment'} />} />
         <Route path='about-us' element={<About />} />
+        <Route path='contact-us' element={<Contact />} />
       </Route>
       <Route path="/auth" element={<AuthLayout />}>
         <Route path='sign-in' element={<SignIn />} />
